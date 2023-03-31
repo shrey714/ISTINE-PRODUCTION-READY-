@@ -1,0 +1,57 @@
+{
+  "project_info": {
+    "project_number": "6484832530",
+    "firebase_url": "https://istine-c91ac-default-rtdb.firebaseio.com",
+    "project_id": "istine-c91ac",
+    "storage_bucket": "istine-c91ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6484832530:android:8bc3e1bb45947c6a52c3cb",
+        "android_client_info": {
+          "package_name": "com.second"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6484832530-60gio0emd2edu8ijpec9k73cm91js6cf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.second",
+            "certificate_hash": "e2154d63cbaf7f91c31b8497b12cd321313103a8"
+          }
+        },
+        {
+          "client_id": "6484832530-hisc529cn2eo20a91hsgqq6oubtneh9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.second",
+            "certificate_hash": "66dd5805dded63e8faae588e740dff7e56383c13"
+          }
+        },
+        {
+          "client_id": "6484832530-fmjo4h8vt403sqn8lgj0se7tbve6dru5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDagqK5AU21QBktjhwEWjDx9kaBMPHTalw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6484832530-fmjo4h8vt403sqn8lgj0se7tbve6dru5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7393727234144842~4371307856"
+    }
+  ],
+  "configuration_version": "1"
+}

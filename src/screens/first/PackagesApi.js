@@ -1,0 +1,88 @@
+const PackagesApi = [
+  {
+    id: 1,
+    name: 'docker',
+    image: require('../../assets/images/webpimg/DOCKER.webp'),
+    url: 'https://www.docker.com/',
+    data: 'Docker takes away repetitive, mundane configuration tasks and is used throughout the development lifecycle for fast, easy and portable application development – desktop and cloud. Docker’s comprehensive end to end platform includes UIs, CLIs, APIs and security that are engineered to work together across the entire application delivery lifecycle.',
+  },
+  {
+    id: 2,
+    name: 'npm',
+    image: require('../../assets/images/webpimg/NPM.webp'),
+    url: 'https://www.npmjs.com/',
+    data: 'npm is the worlds largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.',
+  },
+  {
+    id: 3,
+    name: 'nodejs',
+    image: require('../../assets/images/webpimg/NODEJS.webp'),
+    url: 'https://nodejs.org/en/',
+    data: 'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.',
+  },
+  {
+    id: 4,
+    name: 'angular',
+    image: require('../../assets/images/webpimg/ANGULAR.webp'),
+    url: 'https://angular.io/',
+    data: 'Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.',
+  },
+  {
+    id: 5,
+    name: 'aws',
+    image: require('../../assets/images/webpimg/AWS.webp'),
+    url: 'https://aws.amazon.com/',
+    data: 'Amazon web service is an online platform that provides scalable and cost-effective cloud computing solutions. AWS is a broadly adopted cloud platform that offers several on-demand operations like compute power, database storage, content delivery, etc., to help corporates scale and grow.',
+  },
+  {
+    id: 6,
+    name: 'react',
+    image: require('../../assets/images/webpimg/REACT.webp'),
+    url: 'https://reactjs.org/',
+    data: 'A JavaScript library for building user interfaces',
+  },
+  {
+    id: 7,
+    name: 'composer',
+    image: require('../../assets/images/webpimg/COMPOSER.webp'),
+    url: 'https://getcomposer.org/',
+    data: 'Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.',
+  },
+  {
+    id: 8,
+    name: 'firebase',
+    image: require('../../assets/images/webpimg/FIREBASE.webp'),
+    url: 'https://firebase.google.com/',
+    data: 'Firebase is an app development platform that helps you build and grow apps and games users love. Backed by Google and trusted by millions of businesses around the world.',
+  },
+  {
+    id: 9,
+    name: 'react native',
+    image: require('../../assets/images/webpimg/REACT_NATIVE.webp'),
+    url: 'https://reactnative.dev/',
+    data: 'React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.',
+  },
+  {
+    id: 10,
+    name: 'flutter',
+    image: require('../../assets/images/webpimg/FLUTTER.webp'),
+    url: 'https://flutter.dev/',
+    data: 'Flutter transforms the app development process Build test and deploy beautiful mobile web desktop and embedded apps from a single codebase',
+  },
+  {
+    id: 11,
+    name: 'go',
+    image: require('../../assets/images/webpimg/GO.webp'),
+    url: 'https://go.dev/',
+    data: 'Build fast, reliable, and efficient software at scale Go is an open source programming language supported by GoogleEasy to learn and get started withBuilt-in concurrency and a robust standard libraryGrowing ecosystem of partners, communities, and tools',
+  },
+  {
+    id: 12,
+    name: 'pypi',
+    image: require('../../assets/images/webpimg/PYPI.webp'),
+    url: 'https://pypi.org/',
+    data: 'The Python Package Index (PyPI) is a repository of software for the Python programming language.',
+  },
+];
+
+export default PackagesApi;
