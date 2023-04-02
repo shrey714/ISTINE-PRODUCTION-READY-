@@ -8,26 +8,26 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:6484832530:android:8bc3e1bb45947c6a52c3cb",
+        "mobilesdk_app_id": "1:6484832530:android:5283a7119e45eee752c3cb",
         "android_client_info": {
-          "package_name": "com.second"
+          "package_name": "com.istine"
         }
       },
       "oauth_client": [
         {
-          "client_id": "6484832530-60gio0emd2edu8ijpec9k73cm91js6cf.apps.googleusercontent.com",
+          "client_id": "6484832530-j0694u4uisp9lbaoonvctmh2itill2dr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.second",
-            "certificate_hash": "e2154d63cbaf7f91c31b8497b12cd321313103a8"
+            "package_name": "com.istine",
+            "certificate_hash": "0f5ed1fe6a0767f98d56f618dbceabaad6980300"
           }
         },
         {
-          "client_id": "6484832530-hisc529cn2eo20a91hsgqq6oubtneh9d.apps.googleusercontent.com",
+          "client_id": "6484832530-qds4f2d9j0krga8nm1d5tdjh1dnbdj3r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.second",
-            "certificate_hash": "66dd5805dded63e8faae588e740dff7e56383c13"
+            "package_name": "com.istine",
+            "certificate_hash": "1ec9b5e18657f7816c1f874b683dfeb259a7cd3f"
           }
         },
         {
