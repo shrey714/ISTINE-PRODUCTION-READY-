@@ -5,6 +5,7 @@ import Settings from './Settings';
 import Sett1 from './notifications/Sett1';
 import Sett2 from './theme/Sett2';
 import Sett3 from './bug_report/Sett3';
+import Sett4 from './bug_result/Sett4';
 import propTypes from 'prop-types';
 import {connect} from 'react-redux';
 const Fifth = ({colorlist}) => {
@@ -37,6 +38,7 @@ const Fifth = ({colorlist}) => {
       <SettingsStack.Screen name="Notifications" component={Sett1} />
       <SettingsStack.Screen name="Theme" component={Sett2} />
       <SettingsStack.Screen name="Bug Report" component={Sett3} />
+      <SettingsStack.Screen name="Bug Result" component={Sett4} />
     </SettingsStack.Navigator>
   );
 };

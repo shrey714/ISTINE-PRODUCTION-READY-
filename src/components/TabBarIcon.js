@@ -10,7 +10,7 @@ const TabBarIcon = (focused, color, size, tabname) => {
     iconName = 'home';
   } else if (tabname === 'Second') {
     iconName = 'question';
-  } else if (tabname === 'Infoandsearch') {
+  } else if (tabname === 'Third') {
     iconName = 'search';
   } else if (tabname === 'Forth') {
     iconName = 'star';

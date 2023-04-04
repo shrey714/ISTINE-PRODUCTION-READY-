@@ -8,7 +8,9 @@ import {
   View,
   ScrollView,
   Image,
+  StyleSheet,
 } from 'react-native';
+import Icon3 from 'react-native-vector-icons/MaterialIcons';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {launchImageLibrary} from 'react-native-image-picker';
 import Snackbar from 'react-native-snackbar';
@@ -18,7 +20,7 @@ import {firebase} from '@react-native-firebase/auth';
 import storage from '@react-native-firebase/storage';
 import propTypes from 'prop-types';
 import {connect} from 'react-redux';
-const Sett3 = ({colorlist}) => {
+const Sett3 = ({colorlist, navigation}) => {
   let PC = colorlist.Primarycolor;
   let SC = colorlist.Secondarycolor;
   let TC = colorlist.Ternarycolor;
@@ -52,6 +54,7 @@ const Sett3 = ({colorlist}) => {
         bugtype,
         desc: textAreaValue,
         images: uploadedimg,
+        response: 'no response yet',
       });
       Snackbar.show({
         text: 'problem statement submited',
@@ -463,6 +466,26 @@ const Sett3 = ({colorlist}) => {
       <Uploadimg />
       <Submitbtn />
       <Waitmodal />
+      <Pressable
+        onPress={() => navigation.navigate('Bug Result')}
+        style={({pressed}) => [
+          styles.settings,
+          {
+            borderWidth: PC === '#000' || PC === '#1F1B24' ? 1 : 0,
+            borderColor: 'rgba(255,255,255,0.6)',
+            backgroundColor: pressed ? PC : TC,
+          },
+        ]}>
+        <Icon3
+          style={styles.icon}
+          name="done-all"
+          size={16}
+          color={TC === '#000' ? '#fff' : '#000'}
+        />
+        <Text style={[styles.text, {color: TC === '#000' ? '#fff' : '#000'}]}>
+          Bug History
+        </Text>
+      </Pressable>
     </>
   );
 };
@@ -475,3 +498,24 @@ Sett3.prototype = {
   colorlist: propTypes.object.isRequired,
 };
 export default connect(mapStateToProps)(Sett3);
+
+const styles = StyleSheet.create({
+  settings: {
+    elevation: 2,
+    position: 'absolute',
+    borderRadius: 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 12,
+    bottom: 20,
+  },
+  text: {
+    fontFamily: 'Quicksand-Bold',
+    fontSize: 17,
+  },
+  icon: {
+    marginHorizontal: 9,
+  },
+});

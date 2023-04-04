@@ -94,12 +94,9 @@ const Favbox = ({details, index, navigation, colorlist}) => {
         },
       ]}
       onPress={() =>
-        navigation.navigate('Infoandsearch', {
-          screen: 'Infopage',
-          params: {
-            packagename: details.packagename,
-            packageversion: details.packageversion,
-          },
+        navigation.navigate('Infopage', {
+          packagename: details.packagename,
+          packageversion: details.packageversion,
         })
       }>
       <Animated.View
