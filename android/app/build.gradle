@@ -256,6 +256,8 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':react-native-push-notification')
     implementation project(':react-native-splash-screen')
+    implementation project(':@react-native-camera-roll_camera-roll')
+    implementation project(':react-native-image-to-pdf')
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.fresco:webpsupport:2.5.0'
     implementation "com.facebook.react:react-native:+"  // From node_modules

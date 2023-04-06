@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Share, View, Text} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Snackbar from 'react-native-snackbar';
 import database from '@react-native-firebase/database';
@@ -9,6 +9,7 @@ import shortid from 'shortid';
 import propTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {firebase} from '@react-native-firebase/auth';
+import Share from 'react-native-share';
 import {
   Menu,
   MenuOptions,
@@ -22,6 +23,7 @@ const Addtofavbtn = ({
   link,
   colorlist,
   packageversion,
+  pdfshareuri,
 }) => {
   let PC = colorlist.Primarycolor;
   let SC = colorlist.Secondarycolor;
@@ -40,17 +42,14 @@ const Addtofavbtn = ({
       }
     }
   }, [packagename, packageversion, packageState]);
-
-  const onShare = async () => {
-    try {
-      Share.share({
-        message: `ISTINE
-${packagename}(${packageversion})
-
-${link}
-`,
-      });
-    } catch (error) {
+  const onPDFShare = async () => {
+    const options = {
+      url: `file://${await pdfshareuri()}`,
+      failOnCancel: false,
+      showAppsToView: true,
+    };
+    Share.open(options).catch(err => {
+      err && console.log(err);
       Snackbar.show({
         text: 'Failed to share',
         textColor:
@@ -62,7 +61,30 @@ ${link}
             ? '#000'
             : '#fff',
       });
-    }
+    });
+  };
+  const onShare = async () => {
+    Share.open({
+      message: `ISTINE
+${packagename}(${packageversion})
+
+${link}
+`,
+      failOnCancel: false,
+    }).catch(err => {
+      err && console.log(err);
+      Snackbar.show({
+        text: 'Failed to share',
+        textColor:
+          PC === '#000' || PC === '#1F1B24' || PC === '#949398'
+            ? '#fff'
+            : '#000',
+        backgroundColor:
+          PC === '#000' || PC === '#1F1B24' || PC === '#949398'
+            ? '#000'
+            : '#fff',
+      });
+    });
   };
   const addpackage = async () => {
     try {
@@ -162,6 +184,28 @@ ${link}
               color: PC === '#000' || PC === '#1F1B24' ? '#fff' : '#000',
             }}>
             Save
+          </Text>
+        </MenuOption>
+        <Separator />
+        <MenuOption
+          customStyles={{
+            optionWrapper: {
+              flexDirection: 'row',
+            },
+          }}
+          onSelect={onPDFShare}>
+          <Icon
+            style={{marginRight: 10}}
+            name="file-pdf-o"
+            size={23}
+            color={SC}
+          />
+          <Text
+            style={{
+              fontFamily: 'Quicksand-Bold',
+              color: PC === '#000' || PC === '#1F1B24' ? '#fff' : '#000',
+            }}>
+            PDF Share
           </Text>
         </MenuOption>
         <Separator />
